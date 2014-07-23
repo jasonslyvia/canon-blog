@@ -1,0 +1,1071 @@
+/*
+Theme Name: canon-blog
+Theme URI: http://wordpress.org/
+Description: theme for canon
+Version: 1.7
+Author: undefined
+Author URI: 
+Tags: 
+ */
+
+
+
+/*
+ * Reset & Typography
+ */
+html {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  background : #fff;
+  -webkit-text-size-adjust : 100%;
+  -ms-text-size-adjust : 100%;
+}
+
+html, 
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+firldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  font-size : 100%;
+  font : inherit;
+  vertical-align : baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+dialog, 
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+*/
+  display: block;
+}
+
+audio, 
+video, 
+canvas {
+  display : inline-block;
+  *display : inline;
+  *zoom : 1;
+}
+
+ol,
+ul {
+    list-style : none;
+}
+
+ol {
+    list-style : decimal;
+}
+
+ul {
+    list-style : disc;
+}
+
+li {
+  margin-left : 30px;
+    display : list-item;
+}
+
+table {
+  border-collapse : collapse;
+  border-spacing : 0;
+}
+
+caption,
+th, 
+td {
+  text-align : left;
+  font-weight : normal;
+  float : none !important;
+}
+
+table, 
+th, 
+td {
+  vertical-align : middle;
+}
+
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+  content : '';
+}
+
+blockquote, 
+q {
+  quotes : "" "";
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+    font-weight: bold;
+}
+
+abbr, 
+acronym {
+  border : 0;
+  font-variant : normal;
+}
+
+del {
+  text-decoration : line-through;
+}
+
+img {
+    color: transparent;
+    font-size: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+a img {
+  border : none;
+}
+
+:focus {
+  outline : 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+html {
+  font-size : 100%;
+}
+
+body {
+  font-size : 75%;
+  color : #000;
+  font-family : Arial, Helvetica, sans-senif;
+}
+
+hr {
+  border: 0 #ccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 0;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight : normal;
+}
+
+h1 {
+  font-size : 3em;
+  line-height : 1;
+  margin-bottom : 0.5em;
+}
+
+h2 {
+  font-size : 2em;
+  margin-bottom : 0.75em;
+}
+
+h3 {
+  font-size : 1.5em;
+  line-height : 1;
+  margin-bottom : 1em;
+}
+
+h4 {
+  font-size : 1.2em;
+  line-height : 1.25;
+  margin-bottom : 1.25em;
+}
+
+h5 {
+  font-size : 1em;
+  font-weight : bold;
+  margin-bottom : 1.5em;
+}
+
+h6 {
+  font-size : 1em;
+  font-weight : bold;
+}
+
+/* Text elements */
+p {
+  margin : 0 0 1.5em;
+}
+
+a:link {
+  color : #ccc;
+  text-decoration : none;
+}
+
+a:visited {
+  color : #ccc;
+  text-decotation : none;
+}
+
+a:focus,
+a:hover {
+  color : #f60;
+  text-decoration : underline;
+}
+
+a:active {
+  
+}
+
+/*
+ * Layouts
+ */
+.layout-wrap {
+  max-width : 100%;
+  margin : 0 auto;
+} 
+ 
+.content-wrap {
+  width : 1020px;
+  margin : 0 auto;
+  
+}
+
+.layout-header {
+  height : 257px;
+}
+
+.layout-content {
+  
+}
+
+.layout-footer {
+  
+}
+
+.layout-main {
+  float : left;
+  display : inline;
+  width : 730px;
+  overflow : hidden;
+}
+
+.layout-sub {
+  float : right;
+  display : inline;
+  width : 200px;
+  overflow : hidden;
+}
+
+
+/*
+ * Utilities
+ */
+.clearfix:after { 
+  visibility:hidden;
+  display:block;
+  height : 0;
+  font-size:0;
+  content: '\0020';
+  clear: both;
+}
+.clearfix {
+  zoom:1;
+}
+/* 
+ * Stylesheet
+ */
+.aliued {
+  
+}
+
+.layout-wrap {
+  background : #e6e6e6 url(http://www.aliued.com/wp-content/uploads/2012/07/aliued-background-new-3.jpg) no-repeat 50% 0;
+}
+
+  /* 
+   * layout-header
+   */
+  .layout-header .header-logo {
+    float : left;
+    width : 351px;
+    height : 58px;
+    overflow : hidden;
+    margin : 42px 0 0 10px;
+  }
+  
+  .layout-header .header-logo a {
+    display : block;
+    width : 351px;
+    height : 58px;
+    overflow : hidden;
+    text-indent : -999px;
+    background : url(images/aliued-logo.png) no-repeat 0 0;
+    *filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.aliued.com/wp-content/themes/aliued-theme-1.7/images/aliued-logo.png");
+    *background:none;
+  }
+  
+  .layout-header .header-navi {
+    float : right;
+    margin : 52px 22px 0 0;
+  }
+  
+  .layout-header .header-navi li {
+    float : left;
+    display : inline;
+    margin-left : 30px;
+  }
+  
+  .layout-header .header-navi li a {
+    display : block;
+    padding : 12px 17px;
+    font-family : Arial;
+    font-size : 14px;
+    line-height : 14px;
+    text-transform : uppercase;
+    text-decoration : none;
+    color : #666;
+    
+    text-shadow : #ffffff 0 1px 1px ;
+  }
+  
+  .layout-header .header-navi li a:hover {
+    text-decoration : none;
+  }
+  
+  .layout-header .header-navi li.current_page_item a {
+    color : #fff;
+    font-weight : bold;
+    text-shadow : none;
+    
+    -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background-color : #ff901d;
+      
+      -webkit-box-shadow : 0 1px 2px 0 rgba(0,0,0,.15);
+    -moz-box-shadow : 0 1px 2px 0 rgba(0,0,0,.15);
+    box-shadow : 0 1px 2px 0 rgba(0,0,0,.15);
+  }
+
+  /*
+   * layout-content
+   */
+  .layout-content {
+    padding : 30px 20px;
+  
+    background-color : #fff;
+    
+    -webkit-box-shadow : 0 0 5px 0 rgba(0,0,0,.15);
+    -moz-box-shadow : 0 0 5px 0 rgba(0,0,0,.15);
+    box-shadow : 0 0 5px 0 rgba(0,0,0,.15);
+  }
+
+
+  /*
+   * Entry
+   */
+  .entry {
+    padding : 0 0 40px 0;
+    margin : 0 0 40px 0;
+    background : url(images/aliued-archive-split.png) no-repeat 50% 100%;
+  }
+  
+  .entry-meta {
+    height : 59px;
+    position : relative;
+  }
+  
+    .entry-meta .entry-author-gravatar {
+      float : left;
+      display : inline;
+      width : 59px;
+      height : 59px;
+      overflow : hidden;
+      margin-right : 14px;
+    }
+    
+    .entry-meta .entry-author-gravatar img {
+      /*border : 2px solid #ccc;*/
+    } 
+  
+    .entry-meta .entry-title {
+      margin-bottom : 4px;
+    }
+    
+    .entry-meta .entry-title a{
+      font-size : 22px;
+      font-family : "Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu ;
+      color : #333;
+      text-decoration : none;
+    }
+    
+    .entry-meta .entry-title a:hover {
+      text-decoration : underline;
+    }
+    
+    .entry-meta .entry-author, 
+    .entry-meta .entry-category, 
+    .entry-meta .entry-date {
+      float : left;
+      display : inline;
+      padding-right : 14px; 
+      margin-right : 4px; 
+    }
+    
+    .entry-meta .entry-author, 
+    .entry-meta .entry-author a, 
+    .entry-meta .entry-category, 
+    .entry-meta .entry-category a, 
+    .entry-meta .entry-date {
+      font-size : 12px;
+      font-family : "Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu ;
+      color : #999;
+      text-decoration : none;
+    }
+    
+    .entry-meta .entry-author, 
+    .entry-meta .entry-category {
+      background : url(images/aliued-post-meta-split.png) no-repeat 100% 50%;
+    }
+    
+    .entry-meta .entry-category {
+    
+    }
+    
+    .entry-meta .entry-date {
+    
+    }
+    
+    .entry-meta .entry_comment {
+      display : block;
+      position : absolute;
+      right : 0;
+      top : 8px;
+      width : 42px;
+      height : 36px;
+      line-height : 33px;
+      overflow : hidden;
+      text-align : center;
+      background : url(images/aliued-comment-background.png) no-repeat 0 0;
+    }
+    
+    .entry-meta .entry_comment a {
+      font-family : Arial;
+      font-size : 16px;
+      font-weight : bold;
+      color : #fff;
+      
+      text-decoration : none;
+    }
+  
+    .entry-content {
+      padding : 10px 0 0 0;
+      font-size: 14px;
+      line-height: 24px;
+      font-family : "Microsoft YaHei","宋体";
+      color : #333;
+      
+    }
+  
+    .page-navi {
+      /*margin : 25px -20px 0 0;*/
+      margin : 25px 0 0 0;
+    }
+    
+    .page-navi .previous {
+      float : left;
+      display : inline;
+      padding : 10px 20px;
+      font-size : 16px;
+    }
+    
+    .page-navi .next {
+      float : right;
+      display : inline;
+      padding : 10px 20px;
+      font-size : 16px;
+    }
+    
+/*
+ * Sidebar
+ */
+
+.layout-sub {
+  
+}
+
+.layout-sub ul {
+  list-style : none;
+  margin : 0;
+  padding : 0;
+}
+
+.layout-sub ul li {
+  margin : 0;
+  padding : 0;
+}
+
+.layout-sub .widget_search div:after {
+  visibility:hidden;
+  display:block;
+  height : 0;
+  font-size:0;
+  content: '\0020';
+  clear: both;
+}
+
+.layout-sub .widget_search div {
+  zoom : 1;
+}
+
+.layout-sub .widget_search #searchform label {
+  display : none;
+}
+
+.layout-sub .widget_search #searchform input {
+  float : left;
+  display : inline;
+}
+
+.layout-sub .widget_search #searchform #s {
+  width : 160px;
+  height : 28px;
+  padding : 0 0 0 10px;
+  line-height : 28px;
+  
+  border : 1px solid #d4d4d4;
+  
+  -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    
+    -webkit-box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);
+    -moz-box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);      
+    box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);
+}
+
+.layout-sub .widget_search #searchform #searchsubmit {
+  position : relative;
+  margin-left : -1px;
+  width : 27px;
+  height : 30px;
+  padding : 0;
+  overflow : hidden;
+  text-indent : -999px;
+  
+  background : #fafafa url(images/aliued-search-button.png) no-repeat 50% 50%;
+  
+  border : 1px solid #d4d4d4;
+  -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.layout-sub .widget {
+  padding-bottom : 40px;
+  
+}
+
+.layout-sub .widget h2.widgettitle {
+  font-family : "Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu ;
+  font-size : 18px;
+  font-weight : bold;
+  color : #333;
+  padding : 0 0 10px 0;
+  border-bottom : 1px solid #d9d9db;
+}
+
+.layout-sub .widget ul {
+  list-style : none;
+  margin : 10px 0 0 0;
+  padding : 0;
+}
+
+.layout-sub .widget ul li {
+  background : url(images/aliued-widget-split.png) no-repeat 0 100%;
+}
+
+.layout-sub .widget ul li a {
+  /*display : block;*/
+  height : 30px;
+  line-height : 30px;
+  padding : 0 0 0 14px;
+  font-size : 13px;
+  font-family : Arial;
+  color : #4c4c4c;
+  text-decoration : none;
+  background : url(images/aliued-widget-list-point.png) no-repeat 1px 50%;
+}
+
+.layout-sub .widget ul li a:hover {
+  color : #f58300;
+}
+
+.layout-sub .widget #recentcomments li a {
+  background : none;
+  display : inline;
+  padding : 0;
+  margin : 0 5px 0 0;
+  border-bottom : dotted 1px #ccc;
+}
+
+.layout-footer {
+  padding : 40px 0 45px 0;
+  text-align : center;
+}
+
+.layout-footer p {
+  margin-bottom : 12px;
+}
+
+.layout-footer p, .layout-footer p a {
+  font-family : Arial;
+  font-size : 13px;
+  color : #666;
+  text-decoration : none; 
+}
+
+/*
+ * Others
+ */
+.page .entry h2 {
+  font-size : 18px;
+  font-weight : bold;
+  margin : 0 0 20px 0;
+}
+
+.page .entry {
+  background : none;
+}
+
+.page-title {
+  font-size : 18px;
+  font-weight : bold;
+  margin : 0 0 20px 0;
+}
+
+.center {
+  font-size : 18px;
+  font-weight : bold;
+  margin : 0 0 20px 0;
+}
+
+#searchform {}
+
+#searchform input {
+  float : left;
+  display : inline;
+}
+
+#searchform .screen-reader-text {
+  float : left;
+  display : inline;
+  height : 50px;
+  line-height : 50px;
+  margin-right : 10px;
+  font-size : 18px;
+  color : #999;
+}
+
+#searchform #s {
+  width : 500px;
+  height : 48px;
+  padding : 0 0 0 10px;
+  line-height : 48px;
+  
+  font-size : 20px;
+  
+  border : 1px solid #d4d4d4;
+  
+  -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    
+    -webkit-box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);
+    -moz-box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);      
+    box-shadow : inset 1px 3px 5px rgba(0,0,0,.08);
+}
+
+#searchform #searchsubmit {
+  position : relative;
+  margin-left : -1px;
+  width : 50px;
+  height : 50px;
+  padding : 0;
+  overflow : hidden;
+  text-indent : -999px;
+  
+  background : #fafafa url(images/aliued-search-button.png) no-repeat 50% 50%;
+  
+  border : 1px solid #d4d4d4;
+  -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+#blog-rss, 
+#blog-email {
+  float : left;
+  display : inline;
+  width : 30px;
+  height : 30px;
+  overflow : hidden;
+  text-indent : -999px;
+}
+
+#blog-rss {
+  background : url(images/aliued-rss.png) no-repeat 0 0;
+}
+
+#blog-email {
+  background : url(images/aliued-email.png) no-repeat 0 0;
+}
+
+#link-aliexpress {
+  clear : both;
+  display : block;
+  width : 147px;
+  height : 45px;
+  overflow : hidden;
+  text-indent : -999px;
+  background : url(images/link-aliexpress.png) no-repeat 0 0;
+}
+
+#link-alibaba {
+  clear : both;
+  display : block;
+  width : 154px;
+  height : 35px;
+  overflow : hidden;
+  text-indent : -999px;
+  background : url(images/link-alibaba.png) no-repeat 0 0;
+}
+
+#follow-us-in-weibo {
+  
+}
+
+#follow-us-in-weibo .team-name {
+  color : #414141;
+  font-size : 12px;
+  font-family : "Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu ;
+}
+
+#follow-us-in-weibo .team-avatar {
+  float : left;
+  display : inline;
+  width : 52px;
+  height : 52px;
+  overflow : hidden;
+  margin-right : 15px;
+}
+
+#follow-us-in-weibo .follow-button {
+  display : block;
+  width : 63px;
+  height : 25px;
+  margin-top : 10px;
+  overflow : hidden;
+  text-indent : -999px;
+  background : url(images/aliued-follow-us-button.png) no-repeat 0 0;
+}
+
+
+/*
+ * Single Post
+ */
+ 
+.single-post .entry {
+  background : none;
+  border-bottom : 2px solid #d1d1d1;
+  margin : 0;
+}
+
+.entry-navi {
+  float : right;
+  display : inline;
+  padding : 14px 28px;
+  color : #88aed5;
+}
+
+.entry-navi span {
+  margin-left : 18px;
+}
+
+.entry-navi a {
+  font-size : 12px;
+  color : #88aed5;
+  text-decoration : none;
+}
+
+
+
+/*
+ * Comments
+ */
+.layout-comment {
+  
+}
+
+
+.comment-title, 
+#respond h3 {
+  padding : 10px 15px;
+  margin : 0;
+  font-size : 14px;
+  line-height : 14px;
+  background-color : #f8f8f8;
+}
+
+.commentlist {
+  list-style : none;
+  margin : 0;
+  padding : 0;
+}
+
+.commentlist li {
+  margin : 0;
+  padding : 0;
+
+}
+
+.commentlist li .comment-body {
+  position : relative;
+  margin-top : 20px;
+  padding-bottom : 20px;
+  border-bottom : 1px dotted #e3e3e3;
+}
+
+.commentlist li .avatar {
+  float : left;
+  background-color : #fff;
+  padding : 2px;
+  margin : 0 16px 0 12px;
+  
+  -webkit-box-shadow : 0 0 3px 0 rgba(0,0,0,.15);
+  -moz-box-shadow : 0 0 3px 0 rgba(0,0,0,.15);
+  box-shadow : 0 0 3px 0 rgba(0,0,0,.15);
+}
+
+.commentlist li .vcard .fn {
+  color : #ec8900;
+}
+
+.commentlist li .vcard .says {
+  display : none;
+}
+
+.commentlist li .comment-meta {
+  padding : 10px 0;
+}
+
+.commentlist li .comment-meta a {
+  font-size : 12px;
+  color : #666;
+  text-decoration : none;
+}
+
+.commentlist li p {
+  font-size : 12px;
+  color : #666;
+  font-weight: normal;
+  line-height: 22px;
+  text-transform: none;
+  padding-left: 63px;
+}
+
+.commentlist li .reply, 
+.commentlist li .thdrpy {
+  display : block;
+  width : 42px;
+  height : 20px;
+  line-height : 20px;
+  text-align : center;
+  position : absolute;
+  bottom : -10px;
+  right : 0;
+  padding : 0;
+  margin : 0;
+  background-color : #eee;
+  border : 1px solid #e3e3e3;
+  color : #7e7e7e;
+}
+
+
+
+.commentlist li .reply a,
+.commentlist li .thdrpy a {
+  color : #7e7e7e;
+  text-decoration : none;
+}
+
+.commentlist li ul {
+  padding-left : 65px;
+}
+
+
+
+.commentlist li, #commentform input, #commentform textarea {
+  font: 12px 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  }
+.commentlist li ul li {
+  font-size: 12px;
+}
+
+
+
+
+.commentlist cite, .commentlist cite a {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.commentlist .comment-childs {
+  padding-left : 65px;
+  padding-top : 20px;
+  background : none;
+  list-style : none;
+  border : none;
+  border-top : 1px dotted #eee;
+}
+
+#respond {
+  margin-top : 50px;
+}
+
+#commentform {
+  padding : 15px;
+}
+
+#commentform p {
+  font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  margin-bottom : 10px;
+}
+
+#commentform p a {
+  color: #999999;
+    font-family: "Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu;
+    font-size: 12px;
+    text-decoration: none;
+}
+  
+#commentform p input {
+  width : 331px;
+  height : 28px;
+  line-height : 28px;
+  padding : 0 12px;
+  border : 1px solid #d9d9d9;
+}
+
+#comment {
+  width : 523px;
+  height : 172px;
+  padding : 10px 12px;
+  border : 1px solid #d9d9d9;
+}
+
+#commentform #submit {
+  width : 115px;
+  height : 37px;
+  
+  -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    background : -moz-linear-gradient(top, #f8f8f8, #f1f1f1 100%);
+  background : -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#f1f1f1));
+  background : -ms-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background : -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background : -o-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background : linear-gradient(top, #f8f8f8, #f1f1f1);
+}
+
+/*
+.commentmetadata {
+  font-weight: normal;
+  font-size:14px;
+  margin:0 0 10px 0;
+  }
+  .commentmetadata a{color:#333; text-decoration:none;}
+  .commentmetadata a:hover{color:#000; text-decoration:underline;}
+
+h3{font-size:14px; font-weight:bold; margin:5px 0;}
+
+.comment-childs{border:1px solid #f5f5f5; background:#FFF !important;}
+.chalt{border:1px solid #f5f5f5; background:#FFF !important;}
+*/
+.shengming{
+  font-size: 12px;
+  }
+.shengming A {
+color: #0090ff;
+text-decoration: none;
+}
