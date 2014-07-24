@@ -341,12 +341,8 @@ a:active {
 /* 
  * Stylesheet
  */
-.aliued {
-  
-}
-
 .layout-wrap {
-  background : #e6e6e6 url(http://www.aliued.com/wp-content/uploads/2012/07/aliued-background-new-3.jpg) no-repeat 50% 0;
+  background : #e6e6e6 url(images/background.jpg) no-repeat 50% 0;
 }
 
   /* 
@@ -354,22 +350,23 @@ a:active {
    */
   .layout-header .header-logo {
     float : left;
-    width : 351px;
-    height : 58px;
+    /* width : 351px; */
+    /* height: 62px; */
     overflow : hidden;
-    margin : 42px 0 0 10px;
+    margin: 50px 0 0 10px;
   }
   
   .layout-header .header-logo a {
-    display : block;
-    width : 351px;
-    height : 58px;
-    overflow : hidden;
-    text-indent : -999px;
-    background : url(images/aliued-logo.png) no-repeat 0 0;
-    *filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.aliued.com/wp-content/themes/aliued-theme-1.7/images/aliued-logo.png");
-    *background:none;
-  }
+    /* display : block; */
+    /* width : 351px; */
+    /* height : 58px; */
+    /* overflow : hidden; */
+  
+    font: 36px/36px "Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+    /* vertical-align: middle; */
+    color: #333;
+    text-shadow: 1px 1px #fff;
+}
   
   .layout-header .header-navi {
     float : right;
