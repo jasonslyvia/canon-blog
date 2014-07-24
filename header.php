@@ -2,7 +2,10 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title><?php bloginfo('title'); ?></title>
+<title><?php wp_title("_", true, 'right'); ?></title>
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="google" content="notranslate" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" />
 <?php wp_head(); ?>
 </head>
