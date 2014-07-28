@@ -3,13 +3,14 @@
 function remove_menus() {
     global $menu;
     $restricted = array(
-        __('Dashboard'), 
-        __('Media'), 
-        __('Pages'), 
-        __('Appearance'), 
-        __('Tools'), 
-        __('Users'), 
-        __('Comments'), 
+        __('Dashboard'),
+        __('Media'),
+        __('Pages'),
+        __('Appearance'),
+        __('Tools'),
+        __('Users'),
+        __('Comments'),
+        __('Settings'),
         __('Plugins')
     );
     end ($menu);
@@ -27,7 +28,7 @@ function remove_menus() {
         }
     }
 }
- 
+
 if (is_admin()){
     // 屏蔽左侧菜单
     add_action('admin_menu', 'remove_menus');
