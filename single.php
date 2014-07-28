@@ -36,6 +36,8 @@
         <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1405568509408801" charset="utf-8"></script>
         <!-- JiaThis Button END -->
       </div>
+
+      <?php comments_template('', true); ?>
     </div>
     <?php endwhile; endif; ?>
   </div>

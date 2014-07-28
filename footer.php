@@ -9,11 +9,12 @@
               </div>
             </form>
           </li>
-          <!-- <li id="text-4" class="widget widget_text" style="display:none;">
+          <li id="text-4" class="widget widget_text">
             <h2 class="widgettitle">微博</h2>
             <div class="textwidget">
-              <iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=2&ptype=1&speed=0&skin=2&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2855231312&verifier=9d7e9f69&dpc=1"></iframe></div>
-          </li> -->
+              <iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1630897653&verifier=d3636f5c&dpc=1"></iframe>
+            </div>
+          </li>
           <li id="categories-410708512" class="widget widget_categories">
             <h2 class="widgettitle">文章分类</h2>
             <ul>

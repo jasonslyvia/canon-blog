@@ -9,7 +9,6 @@ function remove_menus() {
         __('Appearance'), 
         __('Tools'), 
         __('Users'), 
-        __('Settings'), 
         __('Comments'), 
         __('Plugins')
     );
