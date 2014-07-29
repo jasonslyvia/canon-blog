@@ -10,7 +10,6 @@ function remove_menus() {
         __('Tools'),
         __('Users'),
         __('Comments'),
-        __('Settings'),
         __('Plugins')
     );
     end ($menu);
@@ -68,5 +67,19 @@ function rw_title($title, $sep, $direction){
     }
 
     return $title;
+}
+
+
+function get_first_image($img_position=0) {
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    $first_img = $matches[1][$img_position];
+    if(empty($first_img)){
+        return false;
+    }
+    return $first_img;
 }
 ?>

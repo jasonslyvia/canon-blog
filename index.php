@@ -5,11 +5,11 @@
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="entry" id="post-<?php the_ID(); ?>">
-          <div class="entry-meta">  
+          <div class="entry-meta">
             <h2 class="entry-title">
               <a href="<?php the_permalink(); ?>" rel="bookmark" title="详细阅读：<?php the_title();?>"><?php the_title(); ?></a>
             </h2>
-            
+
             <span class="entry-author"><?php the_author(); ?></span>
             <span class="entry-category"><?php the_category(','); ?></span>
             <span class="entry-date"><?php the_time('Y/m/d'); ?></span>
@@ -17,8 +17,10 @@
           </div>
           <div class="entry-content">
             <div style="color: #666666;">
-              <p><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(730, 250), array('width' => 730, 'height' => 250, 'class' => 'alignnone')) ?></a></p>
-              <p><?php echo mb_substr(get_the_content(), 0, 200).'[...]'; ?></p>
+              <?php if (get_first_image()): ?>
+              <p><a href="<?php the_permalink(); ?>"><img width="730" src="<?php echo get_bloginfo('template_url').'/timthumb.php?src='.get_first_image().'&zc=1&w=730'; ?>" /></a></p>
+              <?php endif ?>
+              <p><?php echo mb_substr(preg_replace('/\[[^]]*\]/', '', strip_tags(get_the_content())), 0, 200).'[...]'; ?></p>
               <p><a href="<?php the_permalink(); ?>" class="more-link">详细阅读 &raquo;</a></p>
             </div>
           </div>
@@ -30,6 +32,6 @@
           <span class="previous"><?php next_posts_link('上一页一页 &laquo;', 0); ?></span>
         </div>
       </div>
-      
- 
+
+
  <?php get_footer(); ?>
