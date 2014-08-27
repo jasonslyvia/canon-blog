@@ -5,7 +5,6 @@ function remove_menus() {
     $restricted = array(
         __('Dashboard'),
         __('Media'),
-        __('Pages'),
         __('Appearance'),
         __('Tools'),
         __('Users'),
@@ -82,4 +81,30 @@ function get_first_image($img_position=0) {
     }
     return $first_img;
 }
+
+
+//检查当前用户是否为管理员
+function is_current_user_admin(){
+    $user = wp_get_current_user();
+    return in_array("administrator", (array)$user->roles);
+}
+
+
+function is_index(){
+    return preg_match('/^\/$/', $_SERVER['REQUEST_URI']);
+}
+
+require('lib/JWT.php');
+function create_JWT(){
+    $user = wp_get_current_user();
+    $token = array(
+        "short_name" => "syqblog",
+        "user_key" => $user->ID,
+        "name" => $user->display_name
+    );
+
+    $duoshuoToken = JWT::encode($token, 'canon-blog-secret-you-will-never-know');
+    setcookie('duoshuo_token', $duoshuoToken, '', 'blog.sheyingquan.net');
+}
+
 ?>

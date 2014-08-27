@@ -36,6 +36,13 @@
               <?php wp_list_bookmarks(array('title_li'=>'')); ?>
             </ul>
           </li>
+          <li class="widget widget-ad">
+            <script type="text/javascript">
+              /*120*600 创建于 2014-08-12*/
+              var cpro_id = "u1656053";
+            </script>
+            <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+          </li>
         </ul>
       </div>
     </div>

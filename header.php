@@ -15,10 +15,21 @@
     <div class="layout-header content-wrap clearfix">
       <h1 class="header-logo">
         <a href="/"><?php bloginfo('title'); ?></a>
-      </h1>   
+      </h1>
       <ul class="header-navi clearfix">
-        <li class="current_page_item"> <a href="">首页</a> </li>
-        <li class="page_item"><a href="">关于我们</a></li>
-        <li class="page_item"><a href="">加入我们</a></li>
+        <li class="<?php if (is_index()) echo 'current_'; ?>page_item"> <a href="/">首页</a></li>
+<?php $pages = get_pages(array("sort_column" => "menu_order"));
+    if (count($pages)) {
+        foreach ($pages as $page) {
+?>
+<li class="<?php if (is_page($page->ID)) echo 'current_'; ?>page_item">
+    <a href="/?page_id=<?php echo $page->ID; ?>">
+        <?php echo $page->post_title; ?>
+    </a>
+</li>
+<?php
+        }
+    }
+?>
       </ul>
     </div>

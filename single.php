@@ -5,11 +5,11 @@
 
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
     <div class="entry" id="post-<?php the_ID(); ?>">
-      <div class="entry-meta">  
+      <div class="entry-meta">
         <h2 class="entry-title">
           <a href="<?php the_permalink(); ?>" rel="bookmark" title="详细阅读：<?php the_title();?>"><?php the_title(); ?></a>
         </h2>
-        
+
         <span class="entry-author"><?php the_author(); ?></span>
         <span class="entry-category"><?php the_category(','); ?></span>
         <span class="entry-date"><?php the_time('Y/m/d'); ?></span>
@@ -37,6 +37,23 @@
         <!-- JiaThis Button END -->
       </div>
 
+      <div class="ad-area clearfix">
+        <div class="ad-item">
+        <script type="text/javascript">
+            /*300*250 创建于 2014-08-12*/
+            var cpro_id = "u1656043";
+        </script>
+        <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+        </div>
+        <div class="ad-item">
+        <script type="text/javascript">
+          /*300*250 创建于 2014-08-12*/
+          var cpro_id = "u1656047";
+        </script>
+        <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
+        </div>
+
+      <?php create_JWT(); ?>
       <?php comments_template('', true); ?>
     </div>
     <?php endwhile; endif; ?>
